@@ -1,0 +1,50 @@
+# Dépendances
+node_modules/
+vendor/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Build
+dist/
+build/
+*.egg-info/
+.next/
+out/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Environnement
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Tests
+coverage/
+.coverage
+.pytest_cache/
+
+# Divers
+*.tmp
+*.temp
+.cache/
+
+# Obsidian
+vault/.obsidian/
+vault/.trash/

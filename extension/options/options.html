@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrainClip Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">BC</div>
+        <div>
+          <h1>BrainClip Settings</h1>
+          <p class="subtitle">Configure your backend connection</p>
+        </div>
+      </div>
+      <span class="pill" id="connection-pill" title="Connection status">
+        <span class="dot" aria-hidden="true"></span>
+        <span id="connection-pill-text">Not tested</span>
+      </span>
+    </header>
+
+    <main class="main">
+      <section class="card">
+        <h2>Backend URL</h2>
+
+        <div class="form-group">
+          <label for="backend-url">URL</label>
+          <input type="url" id="backend-url" placeholder="http://localhost:8000" autocomplete="off" spellcheck="false">
+          <p class="help-text">This should point to your FastAPI backend (local by default).</p>
+        </div>
+
+        <div class="row">
+          <button id="test-btn" class="btn btn-secondary" type="button">Test connection</button>
+          <button id="save-btn" class="btn btn-primary" type="button">Save</button>
+        </div>
+
+        <div id="status" class="status hidden" role="status" aria-live="polite"></div>
+      </section>
+
+      <section class="card small">
+        <h2>Tips</h2>
+        <ul class="tips">
+          <li>Start the backend with <span class="code">docker-compose up --build</span></li>
+          <li>Keep it local unless you add authentication</li>
+          <li>If you change ports, update the URL here</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="link" href="https://platform.openai.com/api-keys" target="_blank" rel="noreferrer">OpenAI API keys</a>
+      <span class="sep">•</span>
+      <span class="muted">BrainClip v1.0.0</span>
+    </footer>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

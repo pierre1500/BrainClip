@@ -1,0 +1,3 @@
+"""
+BrainClip Backend - FastAPI Application
+"""

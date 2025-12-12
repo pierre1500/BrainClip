@@ -1,0 +1,91 @@
+/* Darkmatter Minimalist Theme */
+:root {
+  --bg-color: #050505;
+  --text-color: #e0e0e0;
+  --accent-color: #ffffff;
+  --border-color: #333333;
+  --success-color: #00ff9d;
+  --error-color: #ff3333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace; /* Tech/Pro feel */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  width: 200px; /* Minimal width */
+  height: 80px; /* Minimal height */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.clip-btn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 10px 15px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.clip-btn:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.clip-btn:active {
+  transform: scale(0.98);
+}
+
+.clip-btn.loading {
+  border-color: var(--border-color);
+  color: #666;
+  cursor: wait;
+}
+
+.clip-btn.success {
+  border-color: var(--success-color);
+  color: var(--success-color);
+}
+
+.clip-btn.error {
+  border-color: var(--error-color);
+  color: var(--error-color);
+}
+
+.icon {
+  font-size: 14px;
+}
+
+.hidden {
+  display: none;
+}
