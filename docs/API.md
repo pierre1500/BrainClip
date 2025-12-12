@@ -206,3 +206,11 @@ Common error scenarios:
 | "Page content is too short" | Content < 50 characters | Extract more content |
 | "Failed to create note" | OpenAI API error | Check API key and credits |
 | "Connection refused" | Backend not running | Start Docker container |
+
+---
+
+## Security Notes
+
+- This API is designed for **local use only**
+- Never expose port 8000 to the public internet without authentication
+- Notes are saved to `vault/` which is git-ignored by default

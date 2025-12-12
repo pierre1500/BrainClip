@@ -232,3 +232,5 @@ uvicorn app.main:app --reload --port 8000
 - Read the [API Reference](API.md) to understand the backend
 - Check out [Contributing](../CONTRIBUTING.md) to help improve BrainClip
 - Start clipping and building your knowledge base!
+
+> ⚠️ **Note**: The `vault/` folder is git-ignored by default. Your notes stay private and local.

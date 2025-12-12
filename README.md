@@ -88,7 +88,6 @@ BrainClip/
 │   ├── manifest.json        # Extension configuration
 │   ├── background.js        # Service worker
 │   ├── popup/               # Extension popup UI
-│   ├── options/             # Settings page
 │   ├── lib/                 # Readability.js library
 │   └── icons/               # Extension icons
 ├── backend/                 # FastAPI Backend
@@ -99,10 +98,8 @@ BrainClip/
 │   │   └── services/        # Business logic
 │   ├── Dockerfile
 │   └── requirements.txt
-├── vault/                   # Obsidian Vault (your notes!)
-│   ├── github.com/
-│   ├── medium.com/
-│   └── ...
+├── vault/                   # Your local notes (git-ignored)
+├── vault.example/           # Demo notes (safe to commit)
 ├── docs/                    # Documentation
 ├── docker-compose.yml
 ├── .env.example
@@ -159,11 +156,6 @@ Detailed content with proper formatting...
 | `OPENAI_MAX_TOKENS` | Max tokens for response | `2000` |
 | `DEBUG` | Enable debug mode | `false` |
 
-### Extension Settings
-
-Click the extension icon → ⚙️ Settings to configure:
-- **Backend URL**: Default is `http://localhost:8000`
-
 ## 📖 Documentation
 
 - [Setup Guide](docs/SETUP.md) — Detailed installation instructions
@@ -172,17 +164,23 @@ Click the extension icon → ⚙️ Settings to configure:
 
 ## 🤝 Contributing
 
-We welcome contributions! This project grows through community collaboration.
+We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+**You can contribute:**
+- Code improvements and bug fixes
+- Documentation and tests
+- Prompt/template improvements
 
-### Share Your Research
+**Do NOT submit:**
+- Clipped web content (copyright concerns)
+- Personal notes from your vault
+- API keys or secrets
 
-Your clipped notes in `vault/` can become part of the project! Consider contributing valuable notes that others might find useful.
+### About the Vault
+
+> ⚠️ The `vault/` folder is **git-ignored by default**. Your notes stay local and private.
+
+To see example notes, check `vault.example/`. Copy it to `vault/` to bootstrap your local vault, or just start clipping — BrainClip creates `vault/` automatically.
 
 ## 📄 License
 
